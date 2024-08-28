@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Login page</title>
+   </head>
+   <body class="bg-black h-screen flex items-center justify-center">
+      <div class="w-full max-w-md p-6 bg-gray-200 rounded-2xl">
+         <div class="flex items-center justify-center mb-8">
+            <img
+               src="{% static "images/logo.png" %}" alt="logo du site"
+               alt="logo du site"
+               width="50px"
+               height="50px"
+               class="mr-3"x
+            />
+            <h2 class="text-3xl font-semibold">Mon Etab</h2>
+         </div>
+         <div class="space-y-5">
+            <input
+               class="w-full p-3 border-4 border-black rounded-md placeholder-bold placeholder:text-black"
+               type="text"
+               placeholder="Identifiant"
+            />
+            <input
+               class="w-full p-3 border-4 border-black rounded-md placeholder-bold placeholder:text-black"
+               type="password"
+               placeholder="Mot de passe"
+            />
+            <a
+               class="block w-full text-center bg-blue-500 text-white font-bold py-3 rounded-md shadow hover:bg-blue-700"
+               href="{% url 'dashboard:index' %}"
+            >
+               Connexion
+            </a>
+         </div>
+      </div>
+   </body>
+</html>
